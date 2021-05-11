@@ -31,7 +31,7 @@ class Cookie {
   move () {
     this.position.x += this.speed.x;
     this.position.y += this.speed.y;
-    console.log(this.position);
+    
     if(
       this.position.x + this.radius > canvas.width ||
       this.position.x - this.radius < 0
@@ -45,14 +45,20 @@ class Cookie {
     this.speed.y *= -1;
   }
 
-  /*
-  static remove() {
+  
+  static remove(mousePos) {
     for (let i = 0; i < Cookie.balls.length; i++) {
-      if( getMousePos === Cookie.balls[i])
+      let dy = Math.abs(Cookie.balls[i].position.y - mousePos.y);
+      let dx = Math.abs(Cookie.balls[i].position.x - mousePos.x);
+      let d = Math.sqrt(dy*dy + dx*dx);
+
+      if( d <= Cookie.balls[i].radius){
         Cookie.balls.splice(i, 1);
+        cookies = cookies + cookiebonus
+      }
     }
   }
-*/
+
   
 
 

@@ -4,7 +4,7 @@ canvas = document.body.appendChild(canvas);
 
 
 
-// refresh game 60 times each second
+
 function gameloop () {
   //clear the canvas
   canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
@@ -18,13 +18,16 @@ function gameloop () {
 
 setInterval(gameloop, 1000/60)
 
+
+let cookiespawntime = 1000;
+
 function spawnCookie() {
   
   if(Cookie.balls.length < 5){
     Cookie.balls.push(new Cookie({x: Math.ceil(Math.random() * 750) + 25, y: Math.ceil(Math.random() * 350)+ 25}, {x: Math.floor(Math.random() * 3)+ 1, y: Math.floor(Math.random() * 3)+ 1}, 25, "Peru"))
   }
 }
-setInterval(spawnCookie, 1000)
+setInterval(spawnCookie, cookiespawntime)
 
 
 

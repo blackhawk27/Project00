@@ -1,25 +1,25 @@
-var cookies = 0
+let cookies = 10000;
 
-var cookiebonus = 1
-var maxcookies = 5
-var cookiespawntime = 5000
+let cookiebonus = 1;
+let maxcookies = 5;
 
-var cost1 = 20
-var cost2 = 20
-var cost3 = 20
+
+var cost1 = 20;
+var cost2 = 20;
+var cost3 = 20;
 
 //Upgrade buttons
-var u1Button = document.getElementById("u1Button");
+let u1Button = document.getElementById("u1Button");
 u1Button.onclick = function() {
     if (cookies >= cost1) {
         cookies = cookies - cost1
         cost1 = cost1 + 5
         cookiebonus = cookiebonus + 2
-    }
-return [cookies, cost1, cookiebonus]
+    };
+return (cookies, cost1, cookiebonus);
 }
 
-var u2Button = document.getElementById("u2Button");
+let u2Button = document.getElementById("u2Button");
 u2Button.onclick = function() {
     if (cookies >= cost2) {
         cookies = cookies - cost2
@@ -29,7 +29,7 @@ u2Button.onclick = function() {
 return [cookies, cost2, maxcookies]
 }
 
-var u3Button = document.getElementById("u3Button");
+let u3Button = document.getElementById("u3Button");
 u3Button.onclick = function() {
     if (cookiespawntime > 100) {
         if (cookies >= cost3) {
