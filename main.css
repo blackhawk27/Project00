@@ -5,19 +5,41 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  background-color: #f4f4f4;
-  color: #000;
+  color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  background: url(images/background.png);
+  background-size: cover;
 }
 
 #canvas {
-  width: 800px;
-  height: 400px;
+  margin-right: 20%;
+  margin-top: -43.8%;
+  margin-left: 30.4%;
+  margin-bottom: 0%;
 }
 
-.canvas_div {
+.shop {
+  float: left;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+.bal {
+  font-size: 30px;
+}
+.bal_input {
+  width: 180px;
+  margin-bottom: 10%;
+}
+
+.upg_btn {
+  display: flex;
   position: relative;
-  margin-left: 25%;
-  margin-right: 25%;
+  width: 185px;
+}
+.upg_input {
+  position: relative;
+  width: 30px;
+  margin-top: 10px;
+  margin-bottom: 15%;
 }

@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <title>Document</title>
 </head>
 <body>
-    <button id="u1Button">Insert here</button>
-    <input type="text" id="u1price" readonly> cookies<br><br>Cookie Balance<input type="text" id="cookiecount" readonly>
-    <button id="u2Button">Insert here</button>
-    <input type="text" id="u2price" readonly> cookies<br><br>
-    <button id="u3Button">Spawn Time</button>
-    <input type="text" id="u3price" readonly> cookies<br><br>
+    <div class="shop">
+        <div class="bal">Cookie Balance<br>
+        <input class="bal_input" type="text" id="cookiecount" readonly></div>
+        <button class="upg_btn" id="u1Button">Better Cookies</button>
+        <input class="upg_input"type="text" id="u1price" readonly> Cookies
+        <button class="upg_btn" id="u2Button">Bigger Oven</button>
+        <input class="upg_input" type="text" id="u2price" readonly> Cookies
+        <button class="upg_btn" id="u3Button">Faster Oven</button>
+        <input class="upg_input" type="text" id="u3price" readonly> Cookies
+        <button class="upg_btn" id="u4Button">Automatic Baking System</button>
+        <input class="upg_input" type="text" id="u4price" readonly> Cookies
+    </div>
 
 <div class="canvas_div">
-    <canvas id="canvas" width="800" height="400" style="border: 2px solid black"></canvas>
+    <canvas id="canvas" width="595" height="610" style="border: 4px solid #000"></canvas>
 </div>
 
 

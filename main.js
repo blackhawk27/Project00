@@ -1,5 +1,5 @@
 // set up game window
-var canvas = document.getElementById("canvas");
+let canvas = document.getElementById("canvas");
 canvas = document.body.appendChild(canvas);
 
 
@@ -19,16 +19,40 @@ function gameloop () {
 setInterval(gameloop, 1000/60)
 
 
-let cookiespawntime = 1000;
+let cookiespawntime = 5000;
 
+// Advanced setinterval
+let spawnCookie = function() {
+    // cookiespawntime *= 1;
+    setTimeout(spawnCookie, cookiespawntime);
+
+    if(Cookie.balls.length < maxcookies){
+      Cookie.balls.push(new Cookie({x: Math.ceil(Math.random() * 545) + 25, y: Math.ceil(Math.random() * 550)+ 25}, 
+      {x: Math.floor(Math.random() * 3) + 1, y: Math.floor(Math.random() * 3) + 1}, 25, "Peru"))
+    }
+}
+setTimeout(spawnCookie, cookiespawntime);
+
+
+let autoBake = 0;
+
+function automaticBaking() {
+    cookies = cookies + autoBake
+    return cookies
+}
+
+setInterval(automaticBaking, 2000);
+
+/*
 function spawnCookie() {
   
-  if(Cookie.balls.length < 5){
-    Cookie.balls.push(new Cookie({x: Math.ceil(Math.random() * 750) + 25, y: Math.ceil(Math.random() * 350)+ 25}, {x: Math.floor(Math.random() * 3)+ 1, y: Math.floor(Math.random() * 3)+ 1}, 25, "Peru"))
+  if(Cookie.balls.length < 10){
+    Cookie.balls.push(new Cookie({x: Math.ceil(Math.random() * 750) + 25, y: Math.ceil(Math.random() * 350)+ 25}, 
+    {x: Math.floor(Math.random() * 3) + 1, y: Math.floor(Math.random() * 3) + 1}, 25, "Peru"))
   }
 }
 setInterval(spawnCookie, cookiespawntime)
-
+*/
 
 
 

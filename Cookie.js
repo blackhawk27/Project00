@@ -1,3 +1,9 @@
+const x = document.getElementById('canvas');
+const ctx = x.getContext('2d');
+
+
+
+
 class Cookie {
 
 
@@ -10,7 +16,13 @@ class Cookie {
     this.speed = speed;
     this.radius = radius;
     this.color = color;
+    this.imgX = this.position.x - this.radius;
   }
+
+
+
+
+
 
   // draws a circle with correct position, color and radius
   draw () {
@@ -52,7 +64,7 @@ class Cookie {
       let dx = Math.abs(Cookie.balls[i].position.x - mousePos.x);
       let d = Math.sqrt(dy*dy + dx*dx);
 
-      if( d <= Cookie.balls[i].radius){
+      if( d <= Cookie.balls[i].radius + 3){
         Cookie.balls.splice(i, 1);
         cookies = cookies + cookiebonus
       }
@@ -63,3 +75,33 @@ class Cookie {
 
 
 }
+
+
+
+const img = document.createElement('img');
+img.src = 'https://cdn.discordapp.com/attachments/799537708217270273/829326866557042718/unknown.png';
+
+
+
+Cookie.prototype.render = function() {
+  // begin a  new sub-path
+  ctx.beginPath();
+  ctx.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.globalCompositeOperation = 'source-in';
+  ctx.drawImage(img, this.imgX, this.position.y - this.radius, this.radius * 2, this.radius * 2);
+  ctx.globalCompositeOperation = 'source-over';
+};
+
+Cookie.prototype.motion = function() {
+  this.imgX = this.imgX + 1;
+  this.position.x = this.position.x + 1;
+}
+
+const animate = () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  Cookie.spawnCookie.render();
+  Cookie.spawnCookie.motion();
+  requestAnimationFrame(animate);
+}
+animate();

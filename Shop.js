@@ -1,12 +1,13 @@
-let cookies = 10000;
+let cookies = 100000;
 
 let cookiebonus = 1;
 let maxcookies = 5;
 
 
-var cost1 = 20;
-var cost2 = 20;
-var cost3 = 20;
+let cost1 = 20;
+let cost2 = 20;
+let cost3 = 20;
+let cost4 = 20;
 
 //Upgrade buttons
 let u1Button = document.getElementById("u1Button");
@@ -36,10 +37,25 @@ u3Button.onclick = function() {
             cookies = cookies - cost3
             cost3 = cost3 + 5
             cookiespawntime = cookiespawntime - 50
+            
         }
     }
 return [cookies, cost3, cookiespawntime]
+
 }
+
+let u4Button = document.getElementById("u4Button");
+u4Button.onclick = function() {
+    if (cookies >= cost4) {
+        cookies = cookies - cost4
+        cost4 = cost4 + 5
+        autoBake= autoBake + 1
+    }
+return [cookies, cost4, autoBake]
+}
+
+
+
 
 
 //Show Money funktioner
@@ -48,6 +64,7 @@ function showMoney() {
     document.getElementById('u1price').value = cost1;
     document.getElementById('u2price').value = cost2;
     document.getElementById('u3price').value = cost3;
+    document.getElementById('u4price').value = cost4;
 }
 
 //Ingame clocks
