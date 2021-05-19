@@ -41,7 +41,7 @@ function automaticBaking() {
     return cookies
 }
 
-setInterval(automaticBaking, 2000);
+setInterval(automaticBaking, 1000);
 
 /*
 function spawnCookie() {
@@ -53,13 +53,3 @@ function spawnCookie() {
 }
 setInterval(spawnCookie, cookiespawntime)
 */
-
-
-
-function mousePressed() {
-    for(let i = Cookie.balls.length - 1; i >= 0; i--){
-      if(Cookie.balls[i].contains(mousePos.x, mousePos.y)){
-        Cookie.balls.splice(i, 1);
-      }
-    }
-}

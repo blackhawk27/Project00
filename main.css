@@ -33,13 +33,39 @@ body {
 }
 
 .upg_btn {
-  display: flex;
+  display: inline-block;
   position: relative;
   width: 185px;
 }
 .upg_input {
   position: relative;
-  width: 30px;
+  width: 60px;
   margin-top: 10px;
   margin-bottom: 15%;
+  display: block;
+}
+
+.label {
+  margin-top: 10px;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.lvl-counter {
+  width: 10%;
+  display: inline-block;
+  position: block;
+  margin-left: 5px;
+}
+.BC_cost {
+  display: inline-flex;
+}
+.BO_cost {
+  display: inline-flex;
+}
+.FO_cost {
+  display: inline-flex;
+}
+.ABS_cost {
+  display: inline-flex;
 }
