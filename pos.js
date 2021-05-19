@@ -10,5 +10,6 @@ function getMousePos(canvas, evt) {
 canvas.addEventListener("click", function (evt) {
     let mousePos = getMousePos(canvas, evt);
     Cookie.remove(mousePos);
+    total_clicks++;
     //alert(mousePos.x + ',' + mousePos.y);
 }, false);

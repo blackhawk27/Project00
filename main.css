@@ -10,12 +10,13 @@ body {
   margin: 0;
   background: url(images/background.png);
   background-size: cover;
+  overflow: hidden;
 }
 
 #canvas {
   margin-right: 20%;
-  margin-top: -43.8%;
-  margin-left: 30.4%;
+  margin-top: -43.3%;
+  margin-left: 30.25%;
   margin-bottom: 0%;
 }
 
@@ -23,6 +24,7 @@ body {
   float: left;
   margin-top: 10%;
   margin-left: 5%;
+  position: relative;
 }
 .bal {
   font-size: 30px;
@@ -68,4 +70,22 @@ body {
 }
 .ABS_cost {
   display: inline-flex;
+}
+/************************************************************************************/
+
+.stats {
+  float: right;
+  margin-top: 20%;
+  margin-right: 0%;
+  position: relative;
+  background-color: #fff;
+  padding: 10px;
+  padding-bottom: 30px;
+}
+.stat-counter {
+  width: 100px;
+  margin-top: 10%;
+}
+.label_stat {
+  color: #000;
 }

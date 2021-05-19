@@ -8,6 +8,29 @@
     <title>Document</title>
 </head>
 <body>
+
+    <div class="stats">
+        
+
+        <div class="clicks_total">
+            <label class="label_stat">Total Clicks:</label>
+            <input class="stat-counter" type="number" id="total_click_counter" readonly>
+        </div>
+
+        <div class="balls_clicked">
+            <label class="label_stat">Cookies Clicked:</label>
+            <input class="stat-counter"type="number" id="balls_clicked_counter" readonly>
+        </div>
+
+        <div class="AVG_pr_click">
+            <label class="label_stat">AVG Cookies Pr Click:</label>
+            <input class="stat-counter"type="number" id="AVG_click_counter" readonly>
+        </div>
+        
+    </div>
+
+
+
     <div class="shop">
         <div class="bal">Cookie Balance<br>
         <input class="bal_input" type="number" id="cookiecount" readonly></div>
@@ -53,12 +76,15 @@
         </div>
     </div>
 
+
+    
+
 <div class="canvas_div">
-    <canvas id="canvas" width="595" height="610" style="border: 4px solid #000"></canvas>
+    <canvas id="canvas" width="595" height="605" style="border: 4px solid #000"></canvas>
 </div>
 
 
-<div class=""></div>
+
 
 
 
@@ -68,5 +94,6 @@
 <script src="main.js"></script>
 <script src="pos.js"></script>
 <script src="Shop.js"></script>
+<script src="stats.js"></script>
 
 </html>
