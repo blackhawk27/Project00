@@ -22,15 +22,17 @@ body {
 
 .shop {
   float: left;
-  margin-top: 10%;
+  margin-top: 8%;
   margin-left: 5%;
   position: relative;
 }
-.bal {
+.bal h1 {
   font-size: 30px;
+  margin: 0;
 }
 .bal_input {
   width: 180px;
+  margin-top: 10%;
   margin-bottom: 10%;
 }
 
@@ -76,16 +78,36 @@ body {
 .stats {
   float: right;
   margin-top: 20%;
-  margin-right: 0%;
+  margin-right: 1%;
   position: relative;
-  background-color: #fff;
-  padding: 10px;
-  padding-bottom: 30px;
 }
 .stat-counter {
-  width: 100px;
-  margin-top: 10%;
+  width: 80px;
+  display: block;
+  position: inline-block;
+  float: right;
+  margin-left: 10px;
 }
 .label_stat {
-  color: #000;
+  color: #fff;
+}
+.clicks_total {
+  display: block;
+  margin-bottom: 10%;
+}
+.balls_clicked {
+  display: block;
+  margin-bottom: 10%;
+}
+.AVG_pr_click {
+  display: block;
+  margin-bottom: 10%;
+}
+.total_cookies {
+  display: block;
+  margin-bottom: 10%;
+}
+.spent_cookies {
+  display: block;
+  margin-bottom: 10%;
 }
