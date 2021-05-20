@@ -63,7 +63,9 @@ class Cookie {
       if( d <= Cookie.balls[i].radius + 3){
         Cookie.balls.splice(i, 1);
         cookies = cookies + cookiebonus;
+        totalCookies = totalCookies + cookiebonus;
         balls_clicked++;
+
       }
     }
   }

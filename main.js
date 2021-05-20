@@ -37,8 +37,9 @@ setTimeout(spawnCookie, cookiespawntime);
 let autoBake = 0;
 
 function automaticBaking() {
-    cookies = cookies + autoBake
-    return cookies
+    cookies = cookies + autoBake;
+    totalCookies = totalCookies + autoBake;
+    return (cookies, totalCookies);
 }
 
 setInterval(automaticBaking, 1000);

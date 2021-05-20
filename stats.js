@@ -4,14 +4,16 @@
 
 let total_clicks = 0;
 let balls_clicked = 0;
-let AVG_click = Math.ceil(balls_clicked/total_clicks);
+let AVG_click = 0;
 
 
-
+/*
 if (total_clicks = 0 ) {
     AVG_click = 0;
 
 }
+
+
 
 /*
 else {
@@ -34,3 +36,7 @@ function showStats() {
 
 //Ingame clocks
 setInterval(showStats, 10)
+
+
+
+

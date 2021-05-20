@@ -12,4 +12,5 @@ canvas.addEventListener("click", function (evt) {
     Cookie.remove(mousePos);
     total_clicks++;
     //alert(mousePos.x + ',' + mousePos.y);
+    AVG_click = Math.round((balls_clicked/total_clicks)*100) /100;
 }, false);
